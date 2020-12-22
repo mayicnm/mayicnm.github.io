@@ -8,12 +8,12 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>React学习记录 | dogeY&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="[TOC] React基础JSX语法基本写法12345&#x2F;&#x2F;jsx基本写法ReactDOM.render(    &lt;h1&gt;Hello React&lt;&#x2F;h1&gt;,    document.getElementById(&#39;root&#39;));  解读方法遇到&lt;&gt;按html语法解读，遇到{}按js语法解读 元素渲染基本案例12345">
+  <meta name="description" content="[TOC]">
 <meta property="og:type" content="article">
 <meta property="og:title" content="React学习记录">
 <meta property="og:url" content="http://example.com/2020/12/22/React%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/index.html">
 <meta property="og:site_name" content="dogeY&#39;s Blog">
-<meta property="og:description" content="[TOC] React基础JSX语法基本写法12345&#x2F;&#x2F;jsx基本写法ReactDOM.render(    &lt;h1&gt;Hello React&lt;&#x2F;h1&gt;,    document.getElementById(&#39;root&#39;));  解读方法遇到&lt;&gt;按html语法解读，遇到{}按js语法解读 元素渲染基本案例12345">
+<meta property="og:description" content="[TOC]">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/React%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20200710100550969.png">
 <meta property="og:image" content="http://example.com/React%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/image-20200710103334385.png">
@@ -34,7 +34,7 @@
 <meta property="og:image" content="http://example.com/React%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/v2-89bf8b72fb612a1e2f348ed0b3e0689f_720w.jpg">
 <meta property="og:image" content="https://pic1.zhimg.com/80/v2-2d16967becf2df18358d62a84d0595e7_720w.jpg">
 <meta property="article:published_time" content="2020-12-22T07:00:42.000Z">
-<meta property="article:modified_time" content="2020-12-22T07:12:19.773Z">
+<meta property="article:modified_time" content="2020-12-22T07:14:03.231Z">
 <meta property="article:author" content="doge Yang">
 <meta property="article:tag" content="react">
 <meta name="twitter:card" content="summary">
@@ -211,11 +211,12 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>[TOC]</p>
+<a id="more"></a>
 <h1 id="React基础"><a href="#React基础" class="headerlink" title="React基础"></a>React基础</h1><h2 id="JSX语法"><a href="#JSX语法" class="headerlink" title="JSX语法"></a>JSX语法</h2><h3 id="基本写法"><a href="#基本写法" class="headerlink" title="基本写法"></a>基本写法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;jsx基本写法</span><br><span class="line">ReactDOM.render(</span><br><span class="line">    &lt;h1&gt;Hello React&lt;&#x2F;h1&gt;,</span><br><span class="line">    document.getElementById(&#39;root&#39;)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
 
 <h3 id="解读方法"><a href="#解读方法" class="headerlink" title="解读方法"></a>解读方法</h3><p>遇到&lt;&gt;按html语法解读，遇到{}按js语法解读</p>
 <h2 id="元素渲染"><a href="#元素渲染" class="headerlink" title="元素渲染"></a>元素渲染</h2><h3 id="基本案例"><a href="#基本案例" class="headerlink" title="基本案例"></a>基本案例</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#125;中如果存在标签结构，并且标签结构要换行，需要用（）</span><br><span class="line">&#x2F;&#x2F;简单的时钟</span><br><span class="line">function tick()&#123;</span><br><span class="line">  const element &#x3D; (</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &lt;h1&gt;HelloWorld&lt;&#x2F;h1&gt;</span><br><span class="line">      &lt;h2&gt;It is &#123;new Date().toLocaleTimeString() &#125;&lt;&#x2F;h2&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">  )</span><br><span class="line">  ReactDOM.render(</span><br><span class="line">    element,</span><br><span class="line">    document.getElementById(&#39;root&#39;)</span><br><span class="line">);</span><br><span class="line">&#125;</span><br><span class="line">setInterval(tick,1000);</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
+
 <h2 id="React组件"><a href="#React组件" class="headerlink" title="React组件"></a>React组件</h2><h3 id="创建形式"><a href="#创建形式" class="headerlink" title="创建形式"></a>创建形式</h3><p>用类的形式创建组件</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">class app extends React.Component &#123;</span><br><span class="line">    render() &#123;</span><br><span class="line">        return (</span><br><span class="line">            &lt;div&gt;</span><br><span class="line">                &lt;h1&gt;Hello React Component&lt;&#x2F;h1&gt;</span><br><span class="line">            &lt;&#x2F;div&gt;</span><br><span class="line">        );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">export default app;</span><br></pre></td></tr></table></figure>
 
